@@ -1,16 +1,88 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #2a7ae2;
+      color: white;
+    }
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+    section {
+      margin: 20px;
+      padding: 20px;
+    }
+    #skills {
+      background-color: #e0f7fa;
+    }
+    #projects {
+      background-color: #ffe0b2;
+    }
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <!-- Header Section with Name and Image -->
+  <header>
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxATEhITEhMVFhUVFRYSFxYVFhUXGBkVFxUYFhUVFxUYHSggGRslGxgVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGzIfHR8vLS0rLS0vLSstKy0tLS4tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0rLi0tLSstMf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwIDBAUGAQj/xABDEAABAwIDBQUEBggEBwAAAAABAAIDBBESITEFBkFRYQcTcYGRIjKCoSNCscHR8AgUUmJykqLhMzRDUxUkY3Ozw/H/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAAhEQEBAAICAgIDAQAAAAAAAAAAAQIRAyESMUFRBBMiMv/aAAwDAQACEQMRAD8AnFERAREQEREBERAREQEREBarbO8NLTWEsgDjowZuI524DqbLit+98pmQEwvEfePdHHhzeWsye8uOmosBnnqoaqK95cXPe5xOZJJJJ6niq3L6aTD5r6Mn342ay2OpY0nhm4i/7WC4Hqt3Q10UzBJE9r2HRzSCF8sGsa4XvY6D8VnbL2pU07j3M0jMVicLiL20uOKndPGPqFFEu6Ham4FsNdY3NhM3K19A9oHzy681LEbw4AtIIIuCMwRzBUqWaVIiIgREQEREBERAREQEREBERAREQEREBERAREQFHW/PaJHTnBTSgvbYmzMTSb+7jOVrcRfVSIV86dpFG6OrkLssROBoubMa4xtyPPATlzVcqvhN1zW1NsyT2ucg95DR7rcZL3Bo4C91rXyXNvO677d7czE0OmGbs8PLx5ldI3c2mtbuwsf2yOr9GV99IejAab8eZ+4BbKGrB6/ID8TqpFqNw4ne7ktbV9mkpIMcjWeN7fJWnLKreGxxrTZ3Ppp4qaeyTeKecSQSuDhG0OjJADsAOEi41AuMznnxUO7Y2NPTyYJQOjmnI+q6nsimc3aMNzYPZLGOowlwbbqWg/Cr7+Yys6sqf0RFdiIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICh/tY2af12lcBk8s9cZFvWx+IKYFynaNswS07JB71PPDMD+62VmMeFs/hVc5uL8d1k0tLHaw5ZLYBq5jeTaNbFK9zGU7WYjYPe4OIF87Bp5cFRuzvbJUYg6Ngw8Y34gbZHIgFcnhZNvQ893TrmNXsxNlwW8299TG8RQNaHG2cgJ1NhYDqtRDt/aAkeyWaXEw4XiOJuFpPC4JBVpjuK5Zay0v9p0DiwSDRpF/M2Ws7KqeSavpbaxv7xx/ca15tf1HxLqNuxPl2fUY/aPdOINrXtmDbyWP2PU80Bp5mtYW1LjFJfN7WYbxkAe7dwuedwrceWp39qcmFyy6+k4IiLpcIiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgLA2/EXU07QLkxvsOZDSQPVZ68c24I55IRwe0qFj5HOc0EjEA7iA7IgEcCFrNn7GigP0bQAeAFhrewXSV8GBxbe9rC/PLVaOvrCCzBbJ13AtxXbbQcjpmuPLrp6fHqzZtrY8UpD3Cz2tADhkbBXNmbOAILnOdbS5NvTRa/Z0dSXl8k14nfVLdBwwnVbiSVjWHAdE2m/TG2+A6KVotnG/L4SqdyNiRxSQiMZsZGJP4o2EYj1N2+nVYNNM50lnZh2Xldd9uxscU0EbC5z3hjQ57jck6+Qz0V8MfLtlycn65Z9zTboiLpcAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIOf3ihIOLg4W8x/b7Fxs1O/XvXAa2aG39bKR9q4e6kxWth48+Hzso5rawRm7sm8+Hqubmx/rcd342fXfw1jcDiQBUuOmIyOYB/JZeSvbE3C3FnmcTi438SqKrehjNLLQVe2Jql2GJtr5YrLK42ui8kdBsqpLpQBrp4A5En7ApnCiPdrYpbhY25cSHSPPAA5kn7Au82RvIySrno3WEkbWSNsfeY4Zi37TTr0c3qujhnVri/J9yfLoERFs5hERAREQEREBERAREQEREBERAREQEREBFS94AJJAAzJOQHiVy+2O0LZtO7A6YPdxEQx28XD2fmg6peEqLNv8AbVSxttSwvlkP+5ZjG+Nrl3gPVRjtrfPaFaSaidwj4Qx+xGPFozd8RKCbdvbyQz1UezonhwkjmdM5hvhDWYWtDv2sTgctMAXN01S4ufDJYTRZPbpiH1ZG82uGfTMcFxXZZITtNp/6ErR09232KQt/NnwHupe/ZDUj2YiT74vmxwGZb14aqvJxeU69teLl8L36aPaGzmuOTAPILcbvbt3zADW8XW+Q5qrdoRyvbHUTwCW2LuWStc51tbW4eF12z7AANFgMgAs+Pgt/025fyZJrBptqVcNFTvkIs1gvb6z3aNbfmTYeagj/AI7U/rRq2vwzd53txwP7NuLbezbkut7U9vCaZtPG67Ic3EHIy6EdcIy8SeS4NwsuvU1px927r6P3R34pK1kYEjGTlvtwk2cHDXDf3hxFuBXUL5Cgfd5IOnHqpL3J7S6iBzYqtxmh0xnORg5g/XHQ59eCpYlOSLSbP3u2fM4NjqYi52jScLieQa6xut2qgiIgIiICIiAiIgIiICIiAiIgIUXMdom3zRUT5W2xuc2Jt+BdqfJocfGyCFd/97Zqyrks8iCMuZGwE4bA2xkaFxte/guVF7Er1zcz4BUl3tAdFZLHDdTxVxoVWDVVhqaNu17LIXNlnqAL4BHEL6XlcQfQNv5qxv1RTR1d5ZXSmVuMOdlb2iMAAyAAtl1XWdjtMHUk54/rI9GxMI+ZK1PapO11QwAj6JpBy52/D5LXBnl7cJWMlc+JkAcZcQczB7wff2SCND1Ux11dWxUTnVhY0xxjGWHOSQ5NZoMNyRe3yWk7GdnxvdNO4XkaQByDSMreJB9AqO1/bWKSOkYco/pZLcZHD2G+TST8Q5JfZEduJJudTn5nVWpg0jMXB4K4SsSVxc4MGpzPRv4nT1VVldHFkSOJv5LLwLxrgMgvJpQASdB8zyCAVvNn757QpgBHUyWGjXnG3ws+9h4WWjhDrXdkToOQ/FYdU4A5uA8SFAnzst37kr+9ina0SxgPDmAgPZexu2+RBLfG/RSCoJ7DHN/XHZi/cvGXEYmH7lOypUiIigEREBERAREQEREBERAUL9uO1C6eKm+qxmM/xPOXoAPVTQvmffzaJnrql+IPb3jmtcBb2GnC0W6AWvxtdTBz7eF1jVDrPHirpksQCsTaRtn1VhnWzReROuGnmF6pEudkz+7oqh/N2LzF2j7Ao62zUuke9xNy9xN/ErtN0qzu9kVDuIy8zI632rgnBa4TpnfaROzGsZS0VfVP91jmtA5lrLho6kvaFHVZVPlkfK83c9xe49SbnyW2qtpYdnwUzT/iSyVMnk7u4m/0E+i0Bz8B+bKlWiiaWwv6DmVbhGBpcfecrjQHZkeGvqqKyYAfiqpGSAEA6u/NlZnqxj0vh91o4u5+S18Upu554DLxOiz6KIhuWROZccz5ck3tK7hec5n4QdGNNj5nX0XjgwD2WW62t9qvRgNzy6ucbn1WPNUtOjgfAEoJR7BqQuqZ5RfCyLDp9Z7hYX8GlTeon/R/gHc1clzd0kbCOFmtcQbc/aPoFLCpQREUAiIgIiICIiAiIgIiIOZ7RtqvpqCd7Gkkjurg2w957OPyuPVfN5eSSTnfMqWO3TajrwU7XnCQZHsFrXvZhJ1/ay8FEwyVoMasFxcLH2gbsv0usyYA6rXSu9kt5Xt4KaMyideNvgr7josHZb/Yt1KzCUg6zY1ZbZtYy/8AqQ2835/etFI7JYbK5zGPZwkLL+LXXHyJVyWQYc1rjl0pZ2oLjkL5/YOKPF7NGnHw/v8AiseKTLEfradBw/PVXGy2F+f5Cz2suzzBoWkqqguXtXOXFWMN7DmbKtqWVTRXwNtr7bvDhdbjCbZfPRbTdHdWWqOM/Rwk5yEXJAysxvHx0z46LYb87pClLZI5CYnkMDXOBkDrE3Nha2XDRRM8d6X/AF5ePk5SWkBzc+56fde/yWNLDyv5uKyXQ20Lj+eqtwAue1tgMRDfU2VqomT9H2KQMrSfcJhDbG4xDvcXnYt+Sl1azd3YsFJAyGBuFgzJ4ucRm9x4krZqgIiICIiAiIgIiICIiAiKl7rAk8Bf0QfPHanVd5tKoz9wtYPhaAuRCzNv13eVE8jvryvcL65uJAstaS46Nt4nP0CuKKlytbI2TNVShkYsLnE8g4WjrzPRUVwcBmVLO4kGGjhBw+7f2eZNyT1WPNyXGdN+DjmeXbiZdwaqP/DkY8a53afvWuqtl1cYJkgeAOIFx45XyU3wwXXOb+17oIWtj1kcWF3IAXIB55jwusePl5Mrpvy8PFjN+kPSyX6clVNUY8LeYxO8OS2hYFYlpm3uGjquzThYz5Fj1U18hoMlnSUTTpl1/ssR2zObj5BLKMEvAXVdnm7oq58cg+hizdwDnHRl+Vsz5c1z8Gyi4tJNmGxOd3W6ZWupA2ZvQymibFBTDC25s6T3nc3HCs85lr+WnH473kkma2ECIBoAsHWs0AcGj8hRnv8AVVO6dohkfI5jSH4nXGLK2EDIHXTosvbO+8dRSuZhkbM44bNJDWW1zGv91xMrGkWHDQjgVnxcd3ut+blnj4z5eST3y0Ko2TRvmniiYSHySNjaToHONgT0F7q0+/HVd72P7FM20I5LezEO+J5EDL+ohdFcj6DpYy1jGk3LWhpPMgWurqIqAiIgIiICIiAiIgIiIC1m8u0f1ekqJ7X7uJ7wOZDfZHrZbNaje6gdPRVULfefC8N/itdo9QEHy6Bnidm48fwVatkEEg6g2XtytBROG2zXTbpb3NgwxTZRaB9jdviOI6rmw0DxVEouq54TKdrYZ3G7ic27UgDA9sjXAi9w4EW55KO9/dtMqJIGxm7Yo3Xt/uvkLpPsYuDkjI0y8MlmRSgNHgFTj4/Gr8nJ5xkgoSrTZQvS5bMV0qkuVnEqXOUD2ifYFvFpLfLh8lde9YMzsLsY8HeHAq9jugomkDXX52B+4q2+e2Sprs/RYznEgHjofFRaldJJItxX0x2TbCbT0Mb7e3MBI48cP1B6Z/EVAW4+wn1tVDA0Gxdief2Yx77vT5kDivq+GJrGta0Wa0BoA4ACwHoq0VoiKAREQEREBERAREQEREBERB8wb+UPcbQqmWsO9c4D91/tt+TgtHiX0fvnuFS7QIe8ujmaMIkZxbwD2n3gM+R6qLtt9kW0IrmDBO391wY/+R9h/UVaUcBjXhcVf2psyqpzhnhkiOn0jC0HwJyPktc7PUk9FbYre4XsMz0/OStOVQZ5DkFUW8Ao0MYYgfz6K42od+f7q9gACuRNYGl7mkgOa2wy1Djc/wAqi9Em1DZrhC5YtTtGL/Sic3+J9/lb71RHWg6iyTIs0yyVQ32dNPs/svBLfl6r0OU7HkxyWOxpcS3nZX3hdn2RbosravE9zDFT4ZJG3uXXJwstyJGfTxUUSx2NbuNpqFsro8M093ku97uwT3Q6Aj2rfvenfrwBeqoIiICIiAiIgIiICIiAiIgIiICIiDW7xyxsppnSAOaGHJwBBJFmixy1IXy5tGNoJsB5ZKeO1jauCKGAayOc8/wRt0/mc30UDbUdqVeehrXyI4uHDTO/TmvCzIJLcWIJGVslA9aL6lYtdWPGKMOIYbEjmR/9Ww2bRTzd53cb5O7bjcWi5Db2uQNdeC1NRTvxuDmuab6OBBtwyPRKLEbbrI7tXGR2XrlAsltlaub6q7KeCtWQeOJJuc11/ZXvE6h2hC+/0chEEo5seQAfhdhPkea5GyrYg+2kXJ9l+8JrtnQSvN5GXhl595HYXPVzS13xLrFAIiICIiAiIgIiICIiAiIgIiICIiCNe2yqjbTwiw7wucWu4tbYNcPAkt/lUG1gc9twMgQD6qRO2naGOsey+UTI4/NwMh+0LgCf+Xd1ePvV4MIK1OLWJOVr+g/FVNcrG032bbnl6Zn5pR2W6m/MdHCYqenxyOcHPkkdhDrHIAAE2Wo3x206rn798bY3FjWkNcXA4bjFcgZ2sPJaKgFhdXqibFw0TZpadlkcjyOqtlUY7uVUhUCw85oOKPVChKpegqkBVBEPpLsH2OYdn993oeKl/ehoFgwt+jc0nibtz8FJKi39HraOPZ8sJOcE7rfwSNDx/V3ilJQCIiAiIgIiICIiAiIgIiICIiAiIg+cO1T/AD9X/wB1v/iauUf/AJf4/uXiLQYDVi7V1HxfaiKL6FdF7q9fxRFUYrNVcfqiKRakVCIoHoXqIgm/9GvTaHjT/wDtU2oigEREBERAREQEREH/2Q==" alt="Yuvraj">
+    <h1>Yuvraj Singh</h1>
+    <p><a href="www.linkedin.com/in/yuvraj-singh-617215329" target="_blank">Visit my LinkedIn Profile</a></p>
+  </header>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>
+      Here are some of the skills I have developed as a web developer:
+    </p>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Version Control with Git</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Below are some of the projects I have worked on:</p>
+    <ul>
+      <li>
+        <strong>Personal Blog</strong>: A responsive blog website built with HTML, CSS, and JavaScript.
+      </li>
+      <li>
+        <strong>Online Store</strong>: A full-stack e-commerce site built with React and Node.js.
+      </li>
+      <li>
+        <strong>Portfolio Website</strong>: This website! Built to showcase my skills and projects.
+      </li>
+    </ul>
+  </section>
 
 </body>
-
 </html>
